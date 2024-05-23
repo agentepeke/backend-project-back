@@ -1,0 +1,10 @@
+version: "3"
+services:
+  db:
+    image: "postgres:latest"
+    ports: 
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: fer
+      POSTGRES_DB: proyectoweb
+      POSTGRES_PASSWORD: url.2024

@@ -18,6 +18,10 @@ class Blog {
     @Column({type: 'date'})
     @ApiProperty()
     creationDate: Date;
+    
+    @Column({type: 'varchar', length: 100})
+    @ApiProperty()
+    imagen: string;
 
 }
 export default Blog;

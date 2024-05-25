@@ -26,5 +26,10 @@ class Project {
     @Column({type: 'varchar', length: 100})
     @ApiProperty()
     imagen: string;
+
+    @Column({type: 'varchar', length: 200})
+    @ApiProperty()
+    gitlink: string;
+
 }
 export default Project;

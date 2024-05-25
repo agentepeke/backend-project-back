@@ -17,7 +17,8 @@ import * as Joi from '@hapi/joi'
         DB_NAME: Joi.string().required(),
         DB_USER: Joi.string().required(),
         DB_PASS: Joi.string().required(),
-        MESSAGE: Joi.string().required()
+        MESSAGE: Joi.string().required(),
+        POSTGRES_SSL: Joi.boolean().required(),
       })
     }),
     TypeOrmModule.forRoot({
@@ -29,6 +30,15 @@ import * as Joi from '@hapi/joi'
       database: process.env.DB_NAME,
       autoLoadEntities: true,
       synchronize: false,
+      ssl: process.env.POSTGRES_SSL === 'true',
+      extra: {
+        ssl: 
+          process.env.POSTGRES_SSL === 'true'
+          ?{
+            rejectUnauthorized: false,
+          }
+          : null,
+      },
 
     }),ProjectModule, BlogModule],
   controllers: [AppController],

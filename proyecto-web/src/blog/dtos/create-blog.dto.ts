@@ -12,4 +12,8 @@ export default class CreateBlogDto {
     @IsOptional()
     creationDate: Date;
 
+    @IsString()
+    @IsOptional()
+    imagen: string;
+
 }

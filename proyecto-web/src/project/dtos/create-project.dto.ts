@@ -19,4 +19,7 @@ export default class CreateProjectDto {
     @IsOptional()
     imagen: string;
 
+    @IsString()
+    gitlink: string;
+
 }

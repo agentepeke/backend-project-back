@@ -7,7 +7,7 @@ export const dataSource = new DataSource({
     username: 'fer',
     password: 'url.2024',
     database: 'proyectoweb',
-    synchronize: false,
+    synchronize: true,
     entities: ['src/**/*.entity.ts'],
     migrations: ['./src/migrations/*.ts']
 });
